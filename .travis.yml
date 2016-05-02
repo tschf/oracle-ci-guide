@@ -1,5 +1,8 @@
 sudo: required
 
+notifications:
+  email: false
+
 env:
   global:
     - ORACLE_COOKIE=sqldev
@@ -10,4 +13,3 @@ env:
 
 before_install:
   - .travis/oracle/download.sh
-  - .travis/oracle/install.sh
