@@ -30,3 +30,14 @@ So, after enabling your repository, click the cog icon to the left of the reposi
 When you click the `Add` button, you will want to leave `Display value in the build log` set in the `OFF` position (so know what can get your credentials). After that's done, the settings page should appear like so.
 
 ![](assets/Screenshot from 2016-05-02 16-26-59.png)
+
+This project on GitHub - https://github.com/cbandy/travis-oracle - has all the necessary steps and code to integrate it into your project, but you will want to add a folder in your project to place them all. This can be done with:
+
+```bash
+wget 'https://github.com/cbandy/travis-oracle/archive/v2.0.0.tar.gz'
+mkdir -p .travis/oracle
+tar xz --strip-components 1 -C .travis/oracle -f v2.0.0.tar.gz
+rm v2.0.0.tar.gz
+```
+
+(but I'm sure you can figure out another way if this doesn't suit)
