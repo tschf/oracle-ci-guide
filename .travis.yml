@@ -12,3 +12,7 @@ env:
 
 before_install:
   - .travis/oracle/download.sh
+  - .travis/oracle/install.sh
+
+script:
+  - echo "Process complete"
