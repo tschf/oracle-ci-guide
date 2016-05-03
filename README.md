@@ -20,14 +20,14 @@ The next task you will want to do is add the build status to your README, so use
 
 ![](https://travis-ci.org/tschf/oracle-ci-guide.svg)
 
-Now, the build process requires access to your OTN credentials in order to download the database RPM file - so, that goes without saying that yould be accepting OTN's terms of service - particularly for Oracle XE.
+Now, the build process requires access to your OTN credentials in order to download the database RPM file - so, that goes without saying that wou would be accepting OTN's terms of service - particularly for Oracle XE.
 
 So, after enabling your repository, click the cog icon to the left of the repository name as can be seen above. On the settings page, add the following environment variables:
 
 * ORACLE_LOGIN_ssousername
 * ORACLE_LOGIN_password
 
-When you click the `Add` button, you will want to leave `Display value in the build log` set in the `OFF` position (so know what can get your credentials). After that's done, the settings page should appear like so.
+When you click the `Add` button, you will want to leave `Display value in the build log` set in the `OFF` position (so no what can get your credentials). After that's done, the settings page should appear like so.
 
 ![](assets/Screenshot from 2016-05-02 16-26-59.png)
 
@@ -42,7 +42,7 @@ rm v2.0.0.tar.gz
 
 (but I'm sure you can figure out another way if this doesn't suit)
 
-When you compile source code in SQL*Plus, it doesn't return an exit code. One work around for this is to build a validation package that will raise an error if any of the packages you compile of a `status` of `INVALID`.
+When you compile source code in SQL*Plus, it doesn't return an exit code. One work around for this is to build a validation script that will raise an error if any of the packages you compile of a `status` of `INVALID`.
 
 So, first you can add a check SQL script, similar to:
 
