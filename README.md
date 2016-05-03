@@ -1,6 +1,6 @@
 # Oracle CI Guide for GitHub
 
-note: This guide will set up CI against Oracle 11g XE - so obviously, your code needs to work for that database release.
+note: This guide will set up CI against Oracle 11g XE - so obviously, your code needs to work for that database release; The current examples don't install APEX, so if your scripts rely on APEX packages, keep this in mind.
 
 Go to `travis-ci.org` (or .com if you're setting it up for private projects) and sign in with GitHub - there's a login button at the top right corner.
 
