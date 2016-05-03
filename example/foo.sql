@@ -6,5 +6,5 @@ as
 end foo;
 /
 
-exit
---@check foo
+
+@check foo
