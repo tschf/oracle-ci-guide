@@ -22,5 +22,6 @@ before_script:
 
 script:
   ->
-  { echo "Installation complete"
+  { cd example;
+    ${ORACLE_HOME}/bin/sqlplus -L -S scott/tiger @foo.sql
   }
