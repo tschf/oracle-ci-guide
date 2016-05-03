@@ -21,7 +21,7 @@ before_script:
   } | ${ORACLE_HOME}/bin/sqlplus -L -S / as sysdba
 
 script:
-  ->
+  - >
   { cd example;
     ${ORACLE_HOME}/bin/sqlplus -L -S scott/tiger @foo.sql
   }
