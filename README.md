@@ -1,6 +1,8 @@
-# oracle-ci-test
+# Oracle CI Guide for GitHub
 
-1. Go to `travis-ci.org` (or .com if you're setting it up for private projects) and sign in with GitHub - there's a login button at the top right corner.
+note: This guide will set up CI against Oracle 11g XE - so obviously, your code needs to work for that database release.
+
+Go to `travis-ci.org` (or .com if you're setting it up for private projects) and sign in with GitHub - there's a login button at the top right corner.
 
 ![](assets/Screenshot from 2016-05-02 14-57-53.png)
 
