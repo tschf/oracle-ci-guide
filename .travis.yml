@@ -3,12 +3,20 @@ sudo: required
 version:
   - 1.6
 
+env:
+  global:
+    - XE_ZIP=oracle-xe-11.2.0-1.0.x86_64.rpm.zip
+
 notifications:
   email: false
 
 before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get --no-install-recommends -qq install bc libaio1 rpm unzip
   - go get github.com/tschf/odl
   - odl -component db -version 11gXE -os linux -arch x64 -lang na -accept-license
+  - file $XE_ZIP
+  - unzip $XE_ZIP
 
 script:
   - ./test.sh
