@@ -5,7 +5,7 @@ version:
 
 env:
   global:
-    - CACHE_DIRE=$HOME/.cache
+    - CACHE_DIR=$HOME/.cache
     - XE_ZIP=oracle-xe-11.2.0-1.0.x86_64.rpm.zip
 
 notifications:
