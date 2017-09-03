@@ -1,7 +1,7 @@
 create or replace package foo
 as
 
-    bar NUMBER := 1;sad
+    bar NUMBER := 1;
 
 end foo;
 /
