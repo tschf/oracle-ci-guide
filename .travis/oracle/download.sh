@@ -1,16 +1,15 @@
-#!/bin/sh -e
+#!/bin/bash
 
-[ -n "$ORACLE_COOKIE" ] || { echo "Missing ORACLE_COOKIE environment variable!"; exit 1; }
-[ -n "$ORACLE_FILE" ] || { echo "Missing ORACLE_FILE environment variable!"; exit 1; }
+# Check if the file exists already
+if [[ -f $CACHE_DIR/$XE_ZIP ]]
+then
+    echo "File cached. Don't need to re-fetch"
+    exit 0
+fi
 
-cd "$(dirname "$(readlink -f "$0")")"
-
-npm install bluebird node-phantom-simple
-
-export COOKIES='cookies.txt'
-export USER_AGENT='Mozilla/5.0'
-
-echo > "$COOKIES"
-chmod 600 "$COOKIES"
-
-exec node download.js
+go get github.com/tschf/odl
+odl -component db -version 11gXE -os linux -arch x64 -lang na -accept-license
+file $XE_ZIP
+mkdir -p $CACHE_DIR
+mv $XE_ZIP $CACHE_DIR
+ls $CACHE_DIR
