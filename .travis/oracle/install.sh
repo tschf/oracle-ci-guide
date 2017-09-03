@@ -9,15 +9,7 @@ test -d /var/lock/subsys || sudo mkdir /var/lock/subsys
 
 mkdir -p $HOME/xe_files
 cd $HOME/xe_files
-echo "Downloaded file:"
-file ${CACHE_DIR}/${XE_ZIP}
-echo "Files in cache dir"
-ls ${CACHE_DIR}
-
 unzip -j ${CACHE_DIR}/${XE_ZIP} "Disk1/${XE_RPM}"
-pwd
-ls
-
 sudo rpm --install --nodeps --nopre "${XE_RPM}"
 
 echo 'OS_AUTHENT_PREFIX=""' | sudo tee -a "$ORACLE_HOME/config/scripts/init.ora" > /dev/null
