@@ -14,6 +14,6 @@ file ${CACHE_DIR}/${XE_ZIP}
 echo "Files in cache dir"
 ls ${CACHE_DIR}
 
-unzip ${CACHE_DIR}/${XE_ZIP}
+unzip -j ${CACHE_DIR}/${XE_ZIP} ${XE_RPM}
 pwd
 ls
