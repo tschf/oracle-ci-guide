@@ -1,24 +1,13 @@
+langauge: go
 sudo: required
+version:
+  - 1.6
 
 notifications:
   email: false
 
-env:
-  global:
-    - ORACLE_COOKIE=sqldev
-    - ORACLE_FILE=oracle11g/xe/oracle-xe-11.2.0-1.0.x86_64.rpm.zip
-    - ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
-    - ORACLE_SID=XE
-
-before_install:
-  - .travis/oracle/download.sh
-  - .travis/oracle/install.sh
-
-before_script:
-  - >
-    { echo "CREATE USER scott IDENTIFIED BY tiger;";
-      echo "GRANT CONNECT, RESOURCE to scott;";
-    } | "$ORACLE_HOME/bin/sqlplus" -L -S / AS SYSDBA
+install:
+  - go get github.com/tschf/odl
 
 script:
   - ./test.sh
