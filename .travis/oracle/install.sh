@@ -10,6 +10,7 @@ test -d /var/lock/subsys || sudo mkdir /var/lock/subsys
 cd ${HOME}
 mkdir xe_files
 cd xe_files
+file ${CACHE_DIR}/${XE_ZIP}
 unzip -j ${CACHE_DIR}/${XE_ZIP} "Disk1/${ORACLE_RPM}"
 ls
 
