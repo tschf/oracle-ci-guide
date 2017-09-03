@@ -12,3 +12,5 @@ mkdir xe_files
 cd xe_files
 unzip -j ../${XE_ZIP}
 ls
+
+sudo rpm --install --nodeps --nopre "${ORACLE_RPM}"
