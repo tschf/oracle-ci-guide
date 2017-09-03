@@ -6,8 +6,9 @@ version:
 notifications:
   email: false
 
-install:
+before_install:
   - go get github.com/tschf/odl
+  - odl -component db -version 11gXE -os linux -arch x64 -lang na -accept-license
 
 script:
   - ./test.sh
