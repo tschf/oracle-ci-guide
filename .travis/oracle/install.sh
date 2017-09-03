@@ -7,10 +7,10 @@ df -B1 /dev/shm | awk 'END { if ($1 != "shmfs" && $1 != "tmpfs" || $2 < 21474836
 
 test -d /var/lock/subsys || sudo mkdir /var/lock/subsys
 
-cd ${CACHE_DIR}
+cd ${HOME}
 mkdir xe_files
 cd xe_files
-unzip -j ../${XE_ZIP} "Disk1/${ORACLE_RPM}"
+unzip -j ${CACHE_DIR}/${XE_ZIP} "Disk1/${ORACLE_RPM}"
 ls
 
 sudo rpm --install --nodeps --nopre "${ORACLE_RPM}"
