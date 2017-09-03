@@ -10,7 +10,7 @@ test -d /var/lock/subsys || sudo mkdir /var/lock/subsys
 cd ${CACHE_DIR}
 mkdir xe_files
 cd xe_files
-unzip -j ../${XE_ZIP}
+unzip -j ../${XE_ZIP} "Disk1/${ORACLE_RPM}"
 ls
 
 sudo rpm --install --nodeps --nopre "${ORACLE_RPM}"
