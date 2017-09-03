@@ -17,3 +17,5 @@ ls ${CACHE_DIR}
 unzip -j ${CACHE_DIR}/${XE_ZIP} "Disk1/${XE_RPM}"
 pwd
 ls
+
+sudo rpm --install --nodeps --nopre "${XE_RPM}"
