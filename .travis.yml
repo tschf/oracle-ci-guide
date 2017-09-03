@@ -21,7 +21,6 @@ notifications:
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get --no-install-recommends -qq install bc libaio1 rpm unzip
-  - go get github.com/tschf/odl
   - bash .travis/oracle/download.sh
   - bash .travis/oracle/install.sh
 

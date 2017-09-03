@@ -7,6 +7,7 @@ then
     exit 0
 fi
 
+go get github.com/tschf/odl
 odl -component db -version 11gXE -os linux -arch x64 -lang na -accept-license
 file $XE_ZIP
 mkdir -p $CACHE_DIR
