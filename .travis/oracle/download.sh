@@ -9,6 +9,6 @@ fi
 
 odl -component db -version 11gXE -os linux -arch x64 -lang na -accept-license
 file $XE_ZIP
-mkdir -p $CACHE_DIR
+mkdir -p "$CACHE_DIR"
 mv $XE_ZIP $CACHE_DIR
 ls $CACHE_DIR
