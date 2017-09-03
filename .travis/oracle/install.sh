@@ -13,3 +13,7 @@ echo "Downloaded file:"
 file ${CACHE_DIR}/${XE_ZIP}
 echo "Files in cache dir"
 ls ${CACHE_DIR}
+
+unzip ${CACHE_DIR}/${XE_ZIP}
+pwd
+ls
